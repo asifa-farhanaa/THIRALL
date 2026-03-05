@@ -7,276 +7,301 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Goldman:wght@400;700&family=Exo+2:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        :root {
-            --gold: #ffbe0b;
-            --dark-bg: #0a0a0b;
-            --nav-bg: rgba(0, 0, 0, 0.85);
-            --burnt-ember: #FF5A1F;
-            --shop-accent: #ff0066;
-            --primary-pink: #ff006e;
-            --primary-orange: #ff8500;
-            /* About Section Vars */
-            --chola: #ff4d00;
-            --pandya: #ffcc00;
-            --chera: #00ff88;
-            --pallava: #00d9ff;
-            --card-glass: rgba(255, 255, 255, 0.05);
-        }
+<style>
+    :root {
+        --gold: #ffbe0b;
+        --ink-black: #212122; /* Your specified color */
+        --nav-bg: rgba(0, 0, 0, 0.85);
+        --burnt-ember: #FF5A1F;
+        --shop-accent: #ff0066;
+        --primary-pink: #ff006e;
+        --primary-orange: #ff8500;
+        /* About Section Vars */
+        --chola: #ff4d00;
+        --pandya: #ffcc00;
+        --chera: #00ff88;
+        --pallava: #00d9ff;
+        --card-glass: rgba(255, 255, 255, 0.05);
+    }
 
-        html, body {
-            margin: 0; padding: 0;
-            width: 100%; height: 100%;
-            background: var(--dark-bg);
-            font-family: 'Cinzel', serif;
-            scroll-behavior: smooth;
-            color: white;
-            overflow-x: hidden;
-        }
+    html, body {
+        margin: 0; padding: 0;
+        width: 100%; min-height: 100%;
+        /* UNIFIED BACKGROUND: Solid Ink Black */
+        background-color: var(--ink-black);
+        /* UNIFIED BODY FONT: Exo 2 */
+        font-family: 'Exo 2', sans-serif;
+        scroll-behavior: smooth;
+        color: white;
+        overflow-x: hidden;
+    }
 
-        /* --- NAVBAR --- */
-        .navbar {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 50px;
-            background: linear-gradient(to bottom, var(--nav-bg), transparent);
-            z-index: 1001;
-            box-sizing: border-box;
-            backdrop-filter: blur(10px);
-        }
+    /* UNIFIED HEADING FONT: Goldman */
+    h1, h2, h3, h4, h5, h6, .nav-logo {
+        font-family: 'Goldman', cursive !important;
+    }
 
-        .nav-logo {
-            color: var(--gold);
-            font-size: 26px; font-weight: 900; letter-spacing: 4px;
-            text-decoration: none;
-            text-shadow: 0 0 15px rgba(255, 190, 11, 0.6);
-        }
+    /* --- NAVBAR --- */
+    .navbar {
+        position: fixed;
+        top: 0; left: 0; width: 100%;
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 15px 50px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+        z-index: 1001;
+        box-sizing: border-box;
+        backdrop-filter: blur(10px);
+    }
 
-        .nav-links {
-            display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;
-        }
+    .nav-logo {
+        color: var(--gold);
+        font-size: 26px; font-weight: 900; letter-spacing: 4px;
+        text-decoration: none;
+        text-shadow: 0 0 15px rgba(255, 190, 11, 0.6);
+    }
 
-        .nav-links li a {
-            color: #ffffff; text-decoration: none; font-size: 11px; font-weight: 700;
-            letter-spacing: 1.5px; text-transform: uppercase; transition: 0.3s;
-            display: flex; align-items: center; gap: 8px;
-        }
+    .nav-links {
+        display: flex; gap: 25px; list-style: none; margin: 0; padding: 0;
+    }
 
-        .nav-links li a:hover { color: var(--gold); transform: translateY(-2px); }
+    .nav-links li a {
+        color: #ffffff; text-decoration: none; font-size: 11px; font-weight: 700;
+        letter-spacing: 1.5px; text-transform: uppercase; transition: 0.3s;
+        display: flex; align-items: center; gap: 8px;
+    }
 
-        /* --- LANDING PAGE --- */
-        .landing-page {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            background: url('main image.jpeg') no-repeat center center;
-            background-size: cover;
-            display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
-            z-index: 1;
-        }
+    .nav-links li a:hover { color: var(--gold); transform: translateY(-2px); }
 
-        .content-wrapper { position: relative; z-index: 2; text-align: center; width: 100%; margin-bottom: 70px; }
-        .button-group { display: flex; gap: 25px; justify-content: center; align-items: center; }
+    /* --- LANDING PAGE --- */
+    .landing-page {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: url('main image.jpeg') no-repeat center center;
+        background-size: cover;
+        display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+        z-index: 1;
+    }
 
-        .btn {
-            padding: 16px 38px; font-size: 14px; font-weight: bold;
-            text-transform: uppercase; border-radius: 4px; cursor: pointer;
-            transition: 0.4s; color: white; text-decoration: none; display: inline-flex;
-            align-items: center; gap: 12px; letter-spacing: 2px;
-        }
+    .content-wrapper { position: relative; z-index: 2; text-align: center; width: 100%; margin-bottom: 70px; }
+    .button-group { display: flex; gap: 25px; justify-content: center; align-items: center; }
 
-        .btn-witness { background: rgba(0, 0, 0, 0.65); border: 2px solid white; backdrop-filter: blur(5px); }
-        .btn-battle { background: linear-gradient(45deg, #FF5A1F, #ff006e); border: none; box-shadow: 0 0 20px rgba(255, 90, 31, 0.4); }
+    .btn {
+        padding: 16px 38px; font-size: 14px; font-weight: bold;
+        text-transform: uppercase; border-radius: 4px; cursor: pointer;
+        transition: 0.4s; color: white; text-decoration: none; display: inline-flex;
+        align-items: center; gap: 12px; letter-spacing: 2px;
+    }
 
-        .scroll-container {
-            position: relative;
-            z-index: 10;
-            margin-top: 100vh;
-            background: var(--dark-bg);
-        }
+    .btn-witness { background: rgba(0, 0, 0, 0.65); border: 2px solid white; backdrop-filter: blur(5px); }
+    .btn-battle { background: linear-gradient(45deg, #FF5A1F, #ff006e); border: none; box-shadow: 0 0 20px rgba(255, 90, 31, 0.4); }
 
-        /* --- ABOUT SECTION STYLES --- */
-        .about-section {
-            padding: 100px 20px;
-            background: radial-gradient(circle at 10% 20%, rgba(255, 77, 0, 0.05) 0%, transparent 40%);
-        }
-        .about-container { max-width: 1100px; margin: auto; }
-        .hero-about { text-align: center; margin-bottom: 80px; }
-        .hero-about h1 { font-family: 'Goldman', cursive; font-size: clamp(3rem, 8vw, 5rem); margin: 0; color: #fff; text-transform: uppercase; letter-spacing: 12px; }
-        .intro-text { max-width: 700px; margin: 20px auto; font-size: 1.15rem; color: #bbb; font-family: 'Exo 2', sans-serif; }
-        
-        .section-title-about { font-family: 'Goldman', cursive; font-size: 1.8rem; text-transform: uppercase; text-align: center; margin-bottom: 50px; color: #fff; letter-spacing: 4px; }
-        .section-title-about::after { content: ''; display: block; width: 60px; height: 3px; background: var(--chola); margin: 10px auto 0; box-shadow: 0 0 10px var(--chola); }
+    .scroll-container {
+        position: relative;
+        z-index: 10;
+        margin-top: 100vh;
+        background-color: var(--ink-black); /* Unified Black */
+    }
 
-        .dynasty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-bottom: 80px; }
-        .dynasty-card { background: var(--card-glass); border: 1px solid rgba(255, 255, 255, 0.08); padding: 40px 25px; border-radius: 12px; text-align: center; transition: 0.4s; backdrop-filter: blur(5px); font-family: 'Exo 2', sans-serif; }
-        .dynasty-card:hover { transform: translateY(-12px); background: rgba(255, 255, 255, 0.1); }
-        .dynasty-card h3 { font-family: 'Goldman', cursive; font-size: 1.5rem; margin-bottom: 15px; }
-        
-        .chola:hover { border-bottom: 4px solid var(--chola); box-shadow: 0 15px 35px rgba(255, 77, 0, 0.2); }
-        .pandya:hover { border-bottom: 4px solid var(--pandya); box-shadow: 0 15px 35px rgba(255, 204, 0, 0.2); }
-        .chera:hover { border-bottom: 4px solid var(--chera); box-shadow: 0 15px 35px rgba(0, 255, 136, 0.2); }
-        .pallava:hover { border-bottom: 4px solid var(--pallava); box-shadow: 0 15px 35px rgba(0, 217, 255, 0.2); }
+    /* --- ABOUT SECTION STYLES --- */
+    .about-section {
+        padding: 100px 20px;
+        background-color: var(--ink-black); /* Unified Black */
+    }
+    .about-container { max-width: 1100px; margin: auto; }
+    .hero-about { text-align: center; margin-bottom: 80px; }
+    .hero-about h1 { font-size: clamp(3rem, 8vw, 5rem); margin: 0; color: #fff; text-transform: uppercase; letter-spacing: 12px; }
+    .intro-text { max-width: 700px; margin: 20px auto; font-size: 1.15rem; color: #bbb; }
+    
+    .section-title-about { font-size: 1.8rem; text-transform: uppercase; text-align: center; margin-bottom: 50px; color: #fff; letter-spacing: 4px; }
+    .section-title-about::after { content: ''; display: block; width: 60px; height: 3px; background: var(--chola); margin: 10px auto 0; box-shadow: 0 0 10px var(--chola); }
 
-        .ledger-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .score-item { padding: 30px 20px; background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 15px; text-align: center; transition: 0.3s; font-family: 'Exo 2', sans-serif;}
-        .score-item:hover { border-color: var(--chola); background: rgba(255, 77, 0, 0.05); }
-        .score-val { display: block; font-family: 'Goldman', cursive; font-size: 2.2rem; color: #fff; }
-        .score-label { font-family: 'Goldman', cursive; color: var(--chola); text-transform: uppercase; font-size: 1rem; }
+    .dynasty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-bottom: 80px; }
+    .dynasty-card { background: var(--card-glass); border: 1px solid rgba(255, 255, 255, 0.08); padding: 40px 25px; border-radius: 12px; text-align: center; transition: 0.4s; backdrop-filter: blur(5px); }
+    .dynasty-card:hover { transform: translateY(-12px); background: rgba(255, 255, 255, 0.1); }
+    .dynasty-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+    
+    .chola:hover { border-bottom: 4px solid var(--chola); box-shadow: 0 15px 35px rgba(255, 77, 0, 0.2); }
+    .pandya:hover { border-bottom: 4px solid var(--pandya); box-shadow: 0 15px 35px rgba(255, 204, 0, 0.2); }
+    .chera:hover { border-bottom: 4px solid var(--chera); box-shadow: 0 15px 35px rgba(0, 255, 136, 0.2); }
+    .pallava:hover { border-bottom: 4px solid var(--pallava); box-shadow: 0 15px 35px rgba(0, 217, 255, 0.2); }
 
-        /* --- GAMEPLAY SECTION --- */
-        .gameplay-section {
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            background: #000;
-            border-bottom: 2px solid #222;
-        }
+    .ledger-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .score-item { padding: 30px 20px; background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 15px; text-align: center; transition: 0.3s; }
+    .score-item:hover { border-color: var(--chola); background: rgba(255, 77, 0, 0.05); }
+    .score-val { display: block; font-size: 2.2rem; color: #fff; }
+    .score-label { color: var(--chola); text-transform: uppercase; font-size: 1rem; }
 
-        .slider { width: 100%; height: 100%; overflow: hidden; position: relative; }
-        .slides { display: flex; width: 300%; height: 100%; transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
-        
-        .slide { 
-            width: 33.333%; height: 100%; 
-            display: flex; flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 20px; 
-            flex-shrink: 0;
-        }
+    /* --- GAMEPLAY SECTION --- */
+    .gameplay-section {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: var(--ink-black); /* Unified Black */
+        border-bottom: none; 
+    }
 
-        .hero-card {
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            padding: 30px; border-radius: 25px; text-align: center; 
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
-        }
-        .hero-card h1 { font-family: 'Cinzel', serif; font-size: 2.5rem; margin: 5px 0; color: white; }
+    .slider { width: 100%; height: 100%; overflow: hidden; position: relative; }
+    .slides { display: flex; width: 300%; height: 100%; transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    
+    .slide { 
+        width: 33.333%; height: 100%; 
+        display: flex; flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px; 
+        flex-shrink: 0;
+    }
 
-        #victory-msg {
-            position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%) scale(0);
-            font-family: 'Cinzel', serif; font-size: 80px; font-weight: 900; 
-            color: var(--gold); text-shadow: 0 0 40px rgba(255, 190, 11, 0.6);
-            z-index: 5000; display: none; transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            pointer-events: none;
-        }
+    .hero-card {
+        background: rgba(255, 255, 255, 0.03); 
+        border: 1px solid rgba(255, 255, 255, 0.1); 
+        padding: 30px; border-radius: 25px; text-align: center; 
+        box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    }
+    .hero-card h1 { font-size: 2.5rem; margin: 5px 0; color: white; }
 
-        .gp-btn {
-            background: linear-gradient(90deg, var(--primary-pink), var(--primary-orange));
-            color: white; border: none; padding: 12px 40px; font-size: 14px;
-            font-weight: bold; text-transform: uppercase; border-radius: 50px;
-            cursor: pointer; box-shadow: 0 0 20px rgba(255, 0, 110, 0.4); transition: 0.3s;
-            font-family: 'Cinzel', serif;
-        }
-        .gp-btn:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 0, 110, 0.7); }
+    #victory-msg {
+        position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%) scale(0);
+        font-family: 'Goldman', cursive; font-size: 80px; font-weight: 900; 
+        color: var(--gold); text-shadow: 0 0 40px rgba(255, 190, 11, 0.6);
+        z-index: 5000; display: none; transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        pointer-events: none;
+    }
 
-        .board-container { 
-            perspective: 1200px; 
-            transform: scale(0.65); 
-            margin: 0; 
-            height: 350px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .board {
-            display: grid; grid-template-columns: repeat(10, 45px); grid-template-rows: repeat(10, 45px);
-            border: 10px solid #222; 
-            outline: 4px solid var(--gold);
-            background: #333; 
-            transform: rotateX(50deg) rotateZ(-45deg); 
-            transform-style: preserve-3d;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-        }
-        .cell { width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; position: relative; }
-        .black { background: #222; }
-        .white { background: #444; }
+    .gp-btn {
+        background: linear-gradient(90deg, var(--primary-pink), var(--primary-orange));
+        color: white; border: none; padding: 12px 40px; font-size: 14px;
+        font-weight: bold; text-transform: uppercase; border-radius: 50px;
+        cursor: pointer; box-shadow: 0 0 20px rgba(255, 0, 110, 0.4); transition: 0.3s;
+    }
+    .gp-btn:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 0, 110, 0.7); }
 
-        .piece-gp {
-            font-size: 32px; position: absolute;
-            transform: rotateZ(45deg) rotateX(-50deg) translateY(-15px);
-            transition: all 0.5s ease-out; z-index: 10;
-        }
-        .gold-p { color: var(--gold); filter: drop-shadow(0 0 8px gold); }
-        .red-p { color: #ff2222; text-shadow: 0 0 20px red; }
+    .board-container { 
+        perspective: 1200px; 
+        transform: scale(0.65); 
+        margin: 0; 
+        height: 350px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .board {
+        display: grid; grid-template-columns: repeat(10, 45px); grid-template-rows: repeat(10, 45px);
+        border: 10px solid #222; 
+        outline: 4px solid var(--gold);
+        background: #333; 
+        transform: rotateX(50deg) rotateZ(-45deg); 
+        transform-style: preserve-3d;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+    }
+    .cell { width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; position: relative; }
+    .black { background: #222; }
+    .white { background: #444; }
 
-        .confetti {
-            position: absolute; width: 10px; height: 10px; z-index: 6000;
-            top: -20px; animation: fall 4s linear forwards;
-        }
-        @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
-        #flash-screen { position: absolute; top:0; left:0; width:100%; height:100%; background: white; opacity: 0; z-index: 4000; pointer-events: none; }
+    .piece-gp {
+        font-size: 32px; position: absolute;
+        transform: rotateZ(45deg) rotateX(-50deg) translateY(-15px);
+        transition: all 0.5s ease-out; z-index: 10;
+    }
+    .gold-p { color: var(--gold); filter: drop-shadow(0 0 8px gold); }
+    .red-p { color: #ff2222; text-shadow: 0 0 20px red; }
 
-        /* --- STRATEGY SECTION --- */
-        .strategy-section { padding: 100px 5%; background: #0b0b14; display: flex; flex-direction: column; align-items: center; }
-        .strategy-grid { display: flex; flex-direction: row; justify-content: center; align-items: stretch; gap: 30px; width: 100%; max-width: 1200px; margin-top: 40px; }
-        .card { flex: 1; text-align: center; padding: 40px 20px; background: linear-gradient(145deg, #111, #161625); border-radius: 20px; box-shadow: 0 0 30px rgba(0,0,0,0.5); position: relative; min-width: 280px; font-family: 'Segoe UI', sans-serif; }
-        .board-static { width: 180px; height: 180px; margin: 0 auto; background: linear-gradient(145deg, #1a1a2f, #0f0f1a); transform: rotate(45deg); position: relative; border: 2px solid rgba(255,255,255,0.1); }
-        .board-static::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(to right, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(to bottom, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 40px); }
-        .piece-stat { position: absolute; font-size: 30px; transform: rotate(-45deg); transition: 1.2s cubic-bezier(0.4, 0, 0.2, 1); z-index: 10; }
-        .move1 { top: 130px; left: 20px; }
-        .move1.active, .card:hover .move1 { top: 20px; left: 130px; }
-        .move2 { top: 20px; left: 20px; }
-        .move2.active, .card:hover .move2 { top: 80px; left: 80px; }
-        .move3 { top: 130px; left: 70px; }
-        .move3.active, .card:hover .move3 { top: 70px; left: 70px; }
-        .caption { margin-top: 60px; font-size: 14px; letter-spacing: 1px; color: #aaa; font-weight: 500; }
+    .confetti {
+        position: absolute; width: 10px; height: 10px; z-index: 6000;
+        top: -20px; animation: fall 4s linear forwards;
+    }
+    @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
+    #flash-screen { position: absolute; top:0; left:0; width:100%; height:100%; background: white; opacity: 0; z-index: 4000; pointer-events: none; }
 
-        /* --- SHOP SECTION --- */
-        .buy-section { padding: 100px 10%; display: flex; gap: 70px; align-items: flex-start; flex-wrap: wrap; background: radial-gradient(circle at top, #1a0026, #0d0d1a 70%); font-family: 'Segoe UI', sans-serif; }
-        .left-side { flex: 1; min-width: 320px; text-align: center; }
-        .product-img img { width: 100%; max-width: 520px; border-radius: 20px; box-shadow: 0 0 50px rgba(255, 0, 200, 0.35); transition: 0.4s; }
-        .product-img img:hover { transform: scale(1.04); }
-        .left-buy-btn { margin-top: 25px; }
-        .left-buy-btn button { padding: 14px 40px; border: none; border-radius: 40px; font-size: 16px; font-weight: bold; cursor: pointer; background: linear-gradient(90deg, #ff0066, #ffcc00); color: white; transition: 0.3s; }
-        .left-buy-btn button:hover { transform: scale(1.08); box-shadow: 0 0 20px #ff0066; }
-        .stock { margin-top: 18px; color: #00ffcc; font-size: 14px; }
-        .countdown { margin-top: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .time-box { background: rgba(255, 255, 255, 0.08); padding: 12px 18px; border-radius: 15px; text-align: center; }
-        .time-box h2 { margin: 0; font-size: 24px; color: #ffcc00; }
-        .time-box p { margin: 0; font-size: 12px; color: #aaa; }
-        .product-details { flex: 1; min-width: 320px; }
-        .product-details h1 { font-size: 40px; margin-bottom: 10px; font-family: 'Cinzel', serif; color: white; }
-        .tagline { color: #bbb; margin-bottom: 25px; }
-        .price { font-size: 28px; margin: 15px 0; color: white; }
-        .price span { text-decoration: line-through; font-size: 18px; color: gray; margin-left: 10px; }
-        .badge { background: #ff0066; padding: 6px 14px; border-radius: 30px; font-size: 14px; margin-left: 10px; }
-        .box { background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px; backdrop-filter: blur(10px); margin-top: 20px; }
-        .box h3 { margin-top: 0; color: #ffcc00; }
-        .box ul { padding-left: 18px; line-height: 1.8; color: #ccc; list-style-type: square; }
+    /* --- STRATEGY SECTION --- */
+    .strategy-section { padding: 100px 5%; background-color: var(--ink-black); display: flex; flex-direction: column; align-items: center; }
+    /* New Strategy Title Style */
+    .strategy-section h2 { 
+        font-size: 1.8rem; text-transform: uppercase; text-align: center; margin-bottom: 50px; color: #fff; letter-spacing: 4px; 
+    }
+    .strategy-section h2::after { 
+        content: ''; display: block; width: 60px; height: 3px; background: var(--burnt-ember); margin: 10px auto 0; box-shadow: 0 0 10px var(--burnt-ember); 
+    }
 
-        /* --- FAQ SECTION --- */
-        .faq-section { max-width: 850px; margin: 0 auto; padding: 100px 20px; font-family: 'Segoe UI', sans-serif; }
-        .faq-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: var(--burnt-ember); font-family: 'Cinzel', serif; letter-spacing: 2px; }
-        .faq-item { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 20px; overflow: hidden; transition: 0.3s ease; }
-        .faq-item:hover { border-color: var(--burnt-ember); }
-        .faq-question { padding: 18px 20px; cursor: pointer; position: relative; font-weight: bold; font-size: 16px; color: #eee; }
-        .faq-question::after { content: "+"; position: absolute; right: 20px; font-size: 22px; color: var(--burnt-ember); transition: 0.3s; }
-        .faq-answer { max-height: 0; overflow: hidden; padding: 0 20px; line-height: 1.6; color: #ccc; transition: 0.4s ease; }
-        .faq-item.active .faq-answer { max-height: 250px; padding: 0 20px 20px 20px; }
-        .faq-item.active .faq-question::after { content: "×"; transform: rotate(180deg); }
+    .strategy-grid { display: flex; flex-direction: row; justify-content: center; align-items: stretch; gap: 30px; width: 100%; max-width: 1200px; margin-top: 40px; }
+    .card { flex: 1; text-align: center; padding: 40px 20px; background: linear-gradient(145deg, #111, #161625); border-radius: 20px; box-shadow: 0 0 30px rgba(0,0,0,0.5); position: relative; min-width: 280px; }
+    .board-static { width: 180px; height: 180px; margin: 0 auto; background: linear-gradient(145deg, #1a1a2f, #0f0f1a); transform: rotate(45deg); position: relative; border: 2px solid rgba(255,255,255,0.1); }
+    .board-static::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(to right, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(to bottom, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 40px); }
+    .piece-stat { position: absolute; font-size: 30px; transform: rotate(-45deg); transition: 1.2s cubic-bezier(0.4, 0, 0.2, 1); z-index: 10; }
+    .move1 { top: 130px; left: 20px; }
+    .move1.active, .card:hover .move1 { top: 20px; left: 130px; }
+    .move2 { top: 20px; left: 20px; }
+    .move2.active, .card:hover .move2 { top: 80px; left: 80px; }
+    .move3 { top: 130px; left: 70px; }
+    .move3.active, .card:hover .move3 { top: 70px; left: 70px; }
+    .caption { margin-top: 60px; font-size: 14px; letter-spacing: 1px; color: #aaa; font-weight: 500; }
 
-        /* --- FOOTER --- */
-        footer { background: #0d0d0d; color: #eee; padding: 60px 20px; font-family: sans-serif; border-top: 2px solid #222; }
-        .footer-socials a { margin: 0 15px; color: #eee; font-size: 1.5em; transition: 0.3s; }
-        .footer-socials a:hover { color: var(--gold); }
-        .footer-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 30px 0; text-align: center; }
+    /* --- SHOP SECTION --- */
+    .buy-section { padding: 100px 10%; display: flex; gap: 70px; align-items: flex-start; flex-wrap: wrap; background-color: var(--ink-black); }
+    .left-side { flex: 1; min-width: 320px; text-align: center; }
+    .product-img img { width: 100%; max-width: 520px; border-radius: 20px; box-shadow: 0 0 50px rgba(255, 0, 200, 0.35); transition: 0.4s; }
+    .product-img img:hover { transform: scale(1.04); }
+    .left-buy-btn { margin-top: 25px; }
+    .left-buy-btn button { padding: 14px 40px; border: none; border-radius: 40px; font-size: 16px; font-weight: bold; cursor: pointer; background: linear-gradient(90deg, #ff0066, #ffcc00); color: white; transition: 0.3s; font-family: 'Goldman', cursive; }
+    .left-buy-btn button:hover { transform: scale(1.08); box-shadow: 0 0 20px #ff0066; }
+    .stock { margin-top: 18px; color: #00ffcc; font-size: 14px; }
+    .countdown { margin-top: 15px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .time-box { background: rgba(255, 255, 255, 0.08); padding: 12px 18px; border-radius: 15px; text-align: center; }
+    .time-box h2 { margin: 0; font-size: 24px; color: #ffcc00; }
+    .time-box p { margin: 0; font-size: 12px; color: #aaa; }
+    .product-details { flex: 1; min-width: 320px; }
+    .product-details h1 { font-size: 40px; margin-bottom: 10px; color: white; }
+    .tagline { color: #bbb; margin-bottom: 25px; }
+    .price { font-size: 28px; margin: 15px 0; color: white; }
+    .price span { text-decoration: line-through; font-size: 18px; color: gray; margin-left: 10px; }
+    .badge { background: #ff0066; padding: 6px 14px; border-radius: 30px; font-size: 14px; margin-left: 10px; }
+    .box { background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 20px; backdrop-filter: blur(10px); margin-top: 20px; }
+    .box h3 { margin-top: 0; color: #ffcc00; }
+    .box ul { padding-left: 18px; line-height: 1.8; color: #ccc; list-style-type: square; }
 
-        /* --- VIDEO POPUP --- */
-        #videoPopup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 2000; display: none; justify-content: center; align-items: center; }
+    /* --- FAQ SECTION --- */
+    .faq-section { max-width: 850px; margin: 0 auto; padding: 100px 20px; background-color: var(--ink-black); }
+    /* FAQ Title Updated to White with underline */
+    .faq-title { 
+        text-align: center; font-size: 36px; margin-bottom: 50px; color: #fff; letter-spacing: 2px; font-family: 'Goldman', cursive; 
+    }
+    .faq-title::after { 
+        content: ''; display: block; width: 60px; height: 3px; background: var(--burnt-ember); margin: 10px auto 0; box-shadow: 0 0 10px var(--burnt-ember); 
+    }
+    
+    .faq-item { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 20px; overflow: hidden; transition: 0.3s ease; }
+    .faq-item:hover { border-color: var(--burnt-ember); }
+    .faq-question { padding: 18px 20px; cursor: pointer; position: relative; font-weight: bold; font-size: 16px; color: #eee; }
+    .faq-question::after { content: "+"; position: absolute; right: 20px; font-size: 22px; color: var(--burnt-ember); transition: 0.3s; }
+    .faq-answer { max-height: 0; overflow: hidden; padding: 0 20px; line-height: 1.6; color: #ccc; transition: 0.4s ease; }
+    .faq-item.active .faq-answer { max-height: 250px; padding: 0 20px 20px 20px; }
+    .faq-item.active .faq-question::after { content: "×"; transform: rotate(180deg); }
 
-        @media (max-width: 850px) {
-            .nav-links { display: none; }
-            .strategy-grid { flex-direction: column; align-items: center; }
-            .card { width: 80%; }
-            .button-group { flex-direction: column; }
-            .buy-section { flex-direction: column; text-align: center; }
-            .hero-card h1 { font-size: 1.8rem; }
-            .board-container { transform: scale(0.45); }
-        }
-    </style>
+    /* --- FOOTER --- */
+    footer { 
+        background-color: var(--ink-black); 
+        color: #eee; padding: 60px 20px; 
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .footer-socials a { margin: 0 15px; color: #eee; font-size: 1.5em; transition: 0.3s; }
+    .footer-socials a:hover { color: var(--gold); }
+    .footer-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 30px 0; text-align: center; }
+
+    /* --- VIDEO POPUP --- */
+    #videoPopup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 2000; display: none; justify-content: center; align-items: center; }
+
+    @media (max-width: 850px) {
+        .nav-links { display: none; }
+        .strategy-grid { flex-direction: column; align-items: center; }
+        .card { width: 80%; }
+        .button-group { flex-direction: column; }
+        .buy-section { flex-direction: column; text-align: center; }
+        .hero-card h1 { font-size: 1.8rem; }
+        .board-container { transform: scale(0.45); }
+    }
+</style>
 </head>
 <body>
 
@@ -384,13 +409,13 @@
                     </div>
 
                     <div class="slide">
-                        <h2 style="font-family: 'Cinzel', serif; margin-top: 50px;">STRATEGY READY</h2>
+                        <h2 style="font-family: 'Exo 2', serif; margin-top: 50px;">STRATEGY READY</h2>
                         <div class="board-container"><div class="board" id="mainBoard"></div></div>
                         <button class="gp-btn" onclick="goToBattle()">Enter Battlefield</button>
                     </div>
 
                     <div class="slide">
-                        <h1 style="font-family: 'Cinzel', serif; margin: 50px 0 0 0; font-size: 2rem;">CAPTURE!</h1>
+                        <h1 style="font-family: 'Exo 2', serif; margin: 50px 0 0 0; font-size: 2rem;">CAPTURE!</h1>
                         <div class="board-container"><div class="board" id="battleBoard"></div></div>
                         <div style="display:flex; gap:10px; justify-content: center; align-items: center;">
                             <button class="gp-btn" id="conquerBtn" onclick="realisticSlideClash()">Conquer Now</button>
@@ -459,7 +484,7 @@
         </section>
 
         <section class="faq-section" id="faqs">
-            <div class="faq-title">Battlefield Briefing</div>
+            <div class="faq-title">BATTLEFIELD BRIEFING</div>
             <div class="faq-item">
                 <div class="faq-question">What is Manimaran Studios 8?</div>
                 <div class="faq-answer">Manimaran Studios 8 (OPC) Private Limited is a Chennai-based company focused on developing innovative strategic board games.</div>
@@ -491,7 +516,7 @@
                 <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
             <div style="text-align:center; margin-bottom:30px;">
-                <h2 style="margin:0; font-family:'Cinzel', serif; color:var(--gold);">Manimaran Studios 8 (OPC) Private Limited</h2>
+                <h2 style="margin:0; font-family:'Exo 2', serif; color:var(--gold);">Manimaran Studios 8 (OPC) Private Limited</h2>
                 <p style="font-style:italic; margin:5px 0;">“Designing the Future, Building Dreams”</p>
                 <p style="margin:5px 0; font-weight:bold;">CEO & Founder: Sanjay Manimaran, B. Arch</p>
             </div>
@@ -500,8 +525,12 @@
                 <div style="flex: 1; min-width: 250px; max-width: 400px;"><strong style="color:var(--gold);">Incubation Site:</strong><br>Mohamed Sathak Engineering College, Kilakarai, Ramanathapuram</div>
             </div>
             <div style="text-align:center; margin-bottom:30px; letter-spacing:1px;">📧 info@manimaranstudio8.com | 📞 +91 98765 43210</div>
-            <div style="text-align:center; font-size:0.85em; color:#888;">Website by: <b>Naveetha Thaslim & Asifa Farhana</b></div>
-            <div style="border-top:1px solid #444; padding-top:20px; font-size:0.85em; text-align:center; color:#666;">© 2026 All rights reserved | Manimaran Studios 8</div>
+            <div style="display:flex; justify-content:flex-end; margin-bottom:5px; font-size:0.85em;"> <span>Website by: Naveetha Thaslim & Asifa Farhana – Web Developers</span></div>
+            <div style="border-top:1px solid #444; margin-top:5px; padding-top:10px; font-size:0.85em; text-align:center;">
+
+    © 2026 All rights reserved | All content & designs © Manimaran Studios 8
+
+  </div>
         </footer>
     </div>
 
